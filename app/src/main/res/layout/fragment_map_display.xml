@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MapDisplayFragment">
+
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map_fragment_map"
+        android:layout_above="@+id/map_fragment_buttonbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <android.support.v7.widget.ButtonBarLayout
+        android:id="@+id/map_fragment_buttonbarlayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/map_fragment_near_hospitals_btn"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@color/test_color_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hospital"/>
+        <Button
+            android:id="@+id/map_fragment_user_location_btn"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="@color/test_color_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/location"/>
+    </android.support.v7.widget.ButtonBarLayout>
+</RelativeLayout>
